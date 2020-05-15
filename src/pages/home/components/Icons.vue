@@ -21,30 +21,28 @@
         <img src="//s.qunarzz.com/homenode/images/touchheader/piao.png" />
         <p>景点门票</p>
       </div>
-    </div>
-    <div class="icon-2">
-      <div class="img-1">
+      <div class="img-6">
         <img src="https://picbed.qunarzz.com/f5e5770393d759578962e53ee67798c8.png" />
         <p>海外酒店</p>
       </div>
-      <div class="img-2">
+      <div class="img-7">
         <img src="https://picbed.qunarzz.com/a36d2288f19e54562338f4d8ef986288.png" />
         <p>低价机票</p>
       </div>
-      <div class="img-3">
+      <div class="img-8">
         <img src="https://picbed.qunarzz.com/377db8cb2143aebf01869c9baad3d325.png" />
         <p>汽车票船票</p>
       </div>
-      <div class="img-4">
+      <div class="img-9">
         <img src="https://picbed.qunarzz.com/ae617a31e0bd5803d76918b817f6d942.png" />
         <p>自由行</p>
       </div>
-      <div class="img-5">
+      <div class="img-10">
         <img src="https://picbed.qunarzz.com/1316dc82d1ce6259686d5a68880e5a9d.png" />
         <p>攻略</p>
       </div>
     </div>
-    <div class="icon-3">
+    <div class="icon-2">
       <div class="img-1">
         <img src="https://picbed.qunarzz.com/01d2f57f920666364197a850dab859a8.png" />
         <p>民宿客栈</p>
@@ -103,7 +101,8 @@ export default {
   .icon-1 {
     flex: 1;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 
     img {
       width: 50px;
@@ -119,23 +118,7 @@ export default {
   .icon-2 {
     display: flex;
     flex: 1;
-    justify-content: space-between;
-
-    img {
-      width: 50px;
-      padding: 10px;
-    }
-
-    p {
-      font-size: 10px;
-      text-align: center;
-    }
-  }
-
-  .icon-3 {
-    display: flex;
-    flex: 1;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 
     img {
