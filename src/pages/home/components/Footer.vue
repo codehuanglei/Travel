@@ -5,10 +5,12 @@
       <span>违法和不良信息举报邮箱：tousu@qunar.com</span>
     </p>
     <div class="footer">
-      <div>
-        <i class="iconfont footer-icon-1">&#xe602;</i>
-        <span>回顶部</span>
-      </div>
+      <router-link to="/">
+        <div>
+          <i class="iconfont footer-icon-1">&#xe602;</i>
+          <span>回首页</span>
+        </div>
+      </router-link>
       <div>
         <i class="iconfont footer-icon-2">&#xe600;</i>
         <span>订单</span>
@@ -17,10 +19,12 @@
         <i class="iconfont footer-icon-3">&#xe686;</i>
         <span>客服</span>
       </div>
-      <div>
-        <i class="iconfont footer-icon-4">&#xe601;</i>
-        <span>我的</span>
-      </div>
+      <router-link to="/about">
+        <div>
+          <i class="iconfont footer-icon-4">&#xe601;</i>
+          <span>我的</span>
+        </div>
+      </router-link>
     </div>
   </div>
 </template>
