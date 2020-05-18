@@ -21,9 +21,14 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+@import '~styles/varibles.styl';
+
 .header {
+  background-color: $bgColor;
   width: 100vw;
   height: 50px;
+  margin-top: -5px;
+  padding-bottom: 5px;
   display: flex;
   flex-direction: row;
 }
@@ -36,6 +41,7 @@ export default {
     margin-left: 15px;
     height: 36px;
     background-color: #eee;
+    border-radius: 5px;
 
     .search-icon {
       padding: 10px;
@@ -56,10 +62,12 @@ export default {
   .download-icon {
     margin: 18px 15px 0px 15px;
     font-size: 20px;
+    color: #eee;
 
     .download-text {
       font-size: 12px;
       text-align: center;
+      color: #eee;
     }
   }
 }

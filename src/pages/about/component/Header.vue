@@ -73,8 +73,6 @@ export default {
   margin-top: 44px;
   height: 160px;
 
-  // position: absolute;
-
   // .header-img {
   // position: relative;
   // height: 100px;
