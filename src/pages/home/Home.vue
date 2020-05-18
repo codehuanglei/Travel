@@ -13,6 +13,7 @@ import HomeSwiper from "./components/Swiper";
 import HomeIcons from "./components/Icons";
 import HomeRecommend from "./components/Recommend";
 import HomeFooter from "./components/Footer";
+import axios from "axios";
 export default {
   name: "Home",
   components: {
@@ -21,6 +22,17 @@ export default {
     HomeIcons,
     HomeRecommend,
     HomeFooter
+  },
+  methods: {
+    // getHomeInfo() {
+    //   axios.get("/api/mock/index.json").then(this.getHomeInfoSucc);
+    // },
+    // getHomeInfoSucc(res) {
+    //   console.log(res);
+    // }
+  },
+  mounted() {
+    // this.getHomeInfo();
   }
 };
 </script>

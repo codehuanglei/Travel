@@ -6,37 +6,10 @@
       <div class="nav-today-2">今日特惠度假</div>
     </div>
     <div class="icons">
-      <div class="img-1">
-        <img src="//imgs.qunarzz.com/p/p70/1809/e7/4941057a6aae702.jpg_256x160_9fee6ccb.jpg" />
-        <div>
-          <span>含往返飞机票+4晚住宿</span>
-        </div>
-      </div>
-      <div class="img-2">
-        <img
-          src="//imgs.qunarzz.com/p/p66/201304/17/384810d022dd28f793835fbb.jpg_256x160_6a7ec251.jpg"
-        />
-        <div>
-          <span>含往返飞机票+4晚住宿</span>
-        </div>
-      </div>
-
-      <div class="img-3">
-        <img
-          src="//imgs.qunarzz.com/p/p27/201302/28/d14185ac8a47f6f993835fbb.jpg_256x160_c2ab9336.jpg"
-        />
-        <div>
-          <span>含往返飞机票+4晚住宿</span>
-        </div>
-      </div>
-      <div class="img-4">
-        <img
-          src="//imgs.qunarzz.com/p/p27/201302/28/d14185ac8a47f6f993835fbb.jpg_256x160_c2ab9336.jpg"
-        />
-        <div>
-          <span>含往返飞机票+4晚住宿</span>
-        </div>
-      </div>
+    <div class="icons-hot" v-for="item of imgList" :key="item.id">
+      <img :src="item.imgUrl" />
+      <p>{{item.text}}</p>
+    </div>
     </div>
     <div class="more">更多特惠度假</div>
     <div class="title">特惠门票</div>
@@ -45,46 +18,56 @@
       <div class="nav-today-2">特惠门票</div>
     </div>
     <div class="icons">
-      <div class="img-1">
-        <img
-          src="//img1.qunarzz.com/sight/p0/2004/5c/5c97bfb4aaf82866a3.img.jpg_256x160_eb9cb87f.jpg"
-        />
-        <div>
-          <span>南昌融创乐园</span>
-        </div>
-      </div>
-      <div class="img-2">
-        <img
-          src="//img1.qunarzz.com/sight/p0/1702/db/dbc8f6cf051b3803a3.water.jpg_256x160_0cff5839.jpg"
-        />
-        <div>
-          <span>龙虎山</span>
-        </div>
-      </div>
-
-      <div class="img-3">
-        <img
-          src="//img1.qunarzz.com/sight/p0/1812/a4/a40159d844958689a3.water.jpg_256x160_9f3acc66.jpg"
-        />
-        <div>
-          <span>仙凤三宝</span>
-        </div>
-      </div>
-      <div class="img-4">
-        <img
-          src="//img1.qunarzz.com/sight/p0/201311/19/1e9607bb9cd43d7fdbbe7f8970a3789d.jpg_256x160_7a66ffcc.jpg"
-        />
-        <div>
-          <span>南昌之星摩天轮</span>
-        </div>
+      <div class="icons-hot" v-for="item of recommendList" :key="item.id">
+        <img :src="item.imgUrl" />
+        <p>{{item.text}}</p>
       </div>
     </div>
-    <div class="more">更多特惠门票</div>
-  </div>
+     <div class="more">更多精彩攻略</div>
+    </div>
+        
 </template>
 <script>
 export default {
-  name: "HomeRecommend"
+  name: "HomeRecommend",
+  data(){
+    return{
+      imgList:[{
+        id:"0001",
+        imgUrl:"//imgs.qunarzz.com/p/p70/1809/e7/4941057a6aae702.jpg_256x160_9fee6ccb.jpg",
+        text:"往返飞机票+4晚住宿"
+      },{
+        id:"0002",
+        imgUrl:"//imgs.qunarzz.com/p/p66/201304/17/384810d022dd28f793835fbb.jpg_256x160_6a7ec251.jpg",
+        text:"往返飞机票+4晚住宿"
+      },{
+        id:"0003",
+        imgUrl:"//imgs.qunarzz.com/p/p27/201302/28/d14185ac8a47f6f993835fbb.jpg_256x160_c2ab9336.jpg",
+        text:"往返飞机票+4晚住宿"
+      },{
+        id:"0004",
+        imgUrl:"//imgs.qunarzz.com/p/p27/201302/28/d14185ac8a47f6f993835fbb.jpg_256x160_c2ab9336.jpg",
+        text:"往返飞机票+4晚住宿"
+      }],
+      recommendList:[{
+        id:"0001",
+        imgUrl:"//img1.qunarzz.com/sight/p0/2004/5c/5c97bfb4aaf82866a3.img.jpg_256x160_eb9cb87f.jpg",
+        text:"南昌融创乐园"
+      },{
+        id:"0002",
+        imgUrl:"//img1.qunarzz.com/sight/p0/1702/db/dbc8f6cf051b3803a3.water.jpg_256x160_0cff5839.jpg",
+        text:"龙虎山"
+      },{
+        id:"0003",
+        imgUrl:"//imgs.qunarzz.com/p/p71/1809/50/b5597c7332bef702.jpg_256x160_2bf11d51.jpg",
+        text:"仙凤三宝"
+      },{
+        id:"0004",
+        imgUrl:"//img1.qunarzz.com/sight/p0/201311/19/1e9607bb9cd43d7fdbbe7f8970a3789d.jpg_256x160_7a66ffcc.jpg",
+        text:"南昌之星摩天轮"
+      }]
+    }
+  }
 };
 </script>
 <style lang='stylus' scoped>
@@ -127,23 +110,23 @@ export default {
     align-items: center;
   }
 }
+.icons{
+   display: flex;
+    flex-wrap:wrap
+  .icons-hot {
+    width :50%
+    padding:5px;
+    box-sizing:border-box
 
-.icons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+    img {
+      width: 100%;
+    }
 
-  img {
-    width: 174px;
-  }
-
-  div {
-    width: 174px;
-    text-align: center;
-  }
-
-  span {
-    font-size: 14px;
+    p {
+      padding:3px
+      font-size: 14px;
+      text-align:center
+    }
   }
 }
 

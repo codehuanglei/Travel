@@ -144,6 +144,8 @@ export default {
     height: 74px;
 
     img {
+      display: block;
+      margin: 0 auto;
       width: 50px;
       padding: 10px;
     }
