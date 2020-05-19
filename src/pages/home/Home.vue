@@ -24,12 +24,12 @@ export default {
     HomeFooter
   },
   methods: {
-    // getHomeInfo() {
-    //   axios.get("/api/mock/index.json").then(this.getHomeInfoSucc);
-    // },
-    // getHomeInfoSucc(res) {
-    //   console.log(res);
-    // }
+    getHomeInfo() {
+      axios.get("/api/mock/index.json").then(this.getHomeInfoSucc);
+    },
+    getHomeInfoSucc(res) {
+      console.log(res);
+    }
   },
   mounted() {
     // this.getHomeInfo();

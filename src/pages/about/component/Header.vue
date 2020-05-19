@@ -60,7 +60,7 @@
 </template>
 <script>
 export default {
-  name: "Header"
+  name: "AboutHeader"
 };
 </script>
 <style lang='stylus' scoped>

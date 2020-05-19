@@ -61,5 +61,9 @@ export default {
     display: block;
     font-size: 12px;
   }
+
+  .footer-icon-1 {
+    padding: 3px;
+  }
 }
 </style>
