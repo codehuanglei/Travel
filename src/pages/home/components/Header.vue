@@ -8,14 +8,18 @@
     </div>
     <router-link to='/city'>
        <div class="area">
-       <div class='area-text'>北京</div>
+       <div class='area-text'>{{this.city}}</div>
        </div>     
     </router-link>
   </div>
 </template>
 <script>
+import { mapState } from 'vuex'
 export default {
-  name: "Header"
+  name: "Header",
+  computed:{
+    ...mapState(['city'])
+  }
 };
 </script>
 
@@ -57,11 +61,12 @@ export default {
  .area{
    position:relative;
       .area-text{
-        width :40px
+        min-width :40px
         position:absolute;
-        top:23px
+        top:24px
         left:10px
-        font-size: 17px;
+        font-size: 15px;
+        text-align center
         color: #eee;
       }
 }
